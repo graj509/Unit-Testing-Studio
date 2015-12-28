@@ -47,6 +47,9 @@ public class MyActivityTest extends ActivityInstrumentationTestCase2<MainActivit
 
         TextView greetMessage = (TextView) activity.findViewById(R.id.message_text_view);
         String actualText = greetMessage.getText().toString();
-        assertEquals("Hello, Jake! How are you", actualText);
+        assertEquals("Hello, Jake!", actualText);
+
+
     }
+
 }

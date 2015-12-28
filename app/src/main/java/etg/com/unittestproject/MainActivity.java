@@ -4,6 +4,9 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 
 public class MainActivity extends Activity {
@@ -14,6 +17,17 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
     }
 
+    public void didTapGreetButton(View view) {
+        EditText greetEditText = (EditText) findViewById(R.id.editText);
+
+        String name = greetEditText.getText().toString();
+        String greeting = String.format("Hello, %s!", name);
+
+        TextView messageTextView =
+                (TextView) findViewById(R.id.message_text_view);
+
+        messageTextView.setText(greeting);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

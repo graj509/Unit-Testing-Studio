@@ -18,6 +18,8 @@ public class MainActivity extends Activity {
     }
 
     public void didTapGreetButton(View view) {
+	
+		//I have changed here
         EditText greetEditText = (EditText) findViewById(R.id.editText);
 
         String name = greetEditText.getText().toString();
